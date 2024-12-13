@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Get yur graduation banner photo here!"/>
+  <HelloWorld msg="Get your graduation banner photo here!"/>
 </template>
 
 <script>
