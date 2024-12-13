@@ -8,7 +8,9 @@
       <input type="text" placeholder="Firstname Lastname Surname" v-model="details.name" class="input" @input="updateTextOverlay" />
       <input type="text" placeholder="Course" v-model="details.course" class="input" @input="updateTextOverlay" />
     </div>
-    <canvas ref="canvas" width="500" height="500" class="canvas"></canvas>
+    <!-- <canvas ref="canvas" width="500" height="500" class="canvas"></canvas> -->
+    <canvas ref="canvas" width="500" height="500" style="width: 500px; height: 500px;" class="canvas"></canvas>
+
     <button @click="downloadImage" class="button">Download Photo</button>
 
     <h3>Essential Links</h3>
@@ -63,7 +65,7 @@ export default {
           this.canvas.add(img);
 
           // add components here
-          this.addLogo();   // Add logo first
+          this.addLogo();
           this.addLogoText();
           this.addBanner();
           this.addStaticText();
@@ -257,12 +259,17 @@ export default {
 
     downloadImage() {
       if (this.canvas) {
-        const url = this.canvas.toDataURL("image/png");
+        const scale = 2; 
+        const tempCanvas = this.canvas.toDataURL({
+          format: "png",
+          multiplier: scale, 
+        });
         const link = document.createElement("a");
         link.download = "graduation-banner.png";
-        link.href = url;
+        link.href = tempCanvas;
         link.click();
       }
+      
     },
   }
 
@@ -284,7 +291,6 @@ li {
 a {
   color: #42b983;
 }
-
 .container {
   text-align: center;
   max-width: 600px;
@@ -295,12 +301,10 @@ a {
   margin: 0 auto; 
   text-align: center;
 }
-
 .canvas {
   border: 1px solid #ccc;
   margin-top: 20px;
 }
-
 .inputs {
   display: flex;
   flex-direction: column;
@@ -308,7 +312,6 @@ a {
   width: 100%; 
   max-width: 400px; 
 }
-
 .input {
   display: block;
   margin: 10px 0; 
@@ -317,7 +320,6 @@ a {
   max-width: 100%; 
   box-sizing: border-box; 
 }
-
 .canvas {
   border: 1px solid #ccc;
   margin-top: 20px;
