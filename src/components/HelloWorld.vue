@@ -95,7 +95,7 @@ export default {
         top: 14, 
         fontSize: 10,
         fill: 'white',
-        opacity: 0.8,
+        opacity: 0.7,
         fontWeight: 'regular',
         fontFamily: 'Roboto',
         lineHeight: 1.2, 
@@ -176,6 +176,7 @@ export default {
             textAlign: "center",
             originX: "center",
             fill: "white",
+            opacity: 0.8,
             fontSize: 12,
             fontWeight: "normal",
             fontFamily: 'Merriweather, serif',
@@ -223,6 +224,7 @@ export default {
       textAlign: "center",
       originX: "center",
       fill: "white",
+      opacity: 0.9,
       fontFamily: 'Lobster, serif', 
       fontSize: 14,
       fontWeight: "bold"
@@ -235,6 +237,7 @@ export default {
       textAlign: "center",
       originX: "center",
       fill: "white",
+      opacity: 0.7,
       fontSize: 8,
       fontWeight: "bold"
     });
