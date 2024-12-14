@@ -1,18 +1,24 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Get your graduation banner photo here!"/>
-</template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import { Analytics } from '@vercel/analytics/vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Analytics
   }
 }
 </script>
+
+<template>
+  <Analytics /> <!-- Vercel Analytics -->
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Get your graduation banner photo here!"/>
+</template>
+
+
 
 <style>
 #app {
