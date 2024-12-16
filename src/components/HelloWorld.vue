@@ -15,7 +15,7 @@
 
     <h3>Essential Links</h3>
     <ul>
-      <li><a href="https://www.linkedin.com/in/jekayinoluwa/" target="_blank" rel="noopener">Say hi to me</a></li>
+      <!-- <li><a href="https://www.linkedin.com/in/jekayinoluwa/" target="_blank" rel="noopener">Say hi to me</a></li> -->
       <li><a href="https://gdg.community.dev/gdg-on-campus-kwara-state-university-malete-nigeria/" target="_blank" rel="noopener">Join GDGoC KWASU</a></li>
     </ul>
   </div>
